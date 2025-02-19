@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, {css} from "styled-components";
 import { PersonalityOptions } from "../../constants/personailty";
-import { Color } from "../../Styles/color";
+import { Color } from "../../styles/color";
 import { ButtonGroupProps } from "../../constants/interface";
 
 const ButtonContainer = styled.div`

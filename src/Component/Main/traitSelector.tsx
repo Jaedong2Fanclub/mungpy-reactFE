@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { TraitButton } from "../button/traitButton";
-import "../../Styles/traitSelector.scss";
+import "../../styles/traitSelector.scss";
 import Button from "../button/button";
 
 const traits = [

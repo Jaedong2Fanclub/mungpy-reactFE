@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "../../Styles/color";
+import { Color } from "../../styles/color";
 
 export const Box = styled.div`
   width: 390px;

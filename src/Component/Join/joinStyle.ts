@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Color } from "../../Styles/color";
-import { fontSize } from "../../Styles/font";
+import { Color } from "../../styles/color";
+import { fontSize } from "../../styles/font";
 import { FaExclamationCircle } from "react-icons/fa";
 
 export const Error = styled.p`

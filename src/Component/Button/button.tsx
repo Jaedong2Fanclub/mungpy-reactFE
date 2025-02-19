@@ -1,8 +1,8 @@
 import React, {FC} from "react";
 import { ButtonProps } from "../../constants/interface";
 import styled, {css} from "styled-components"
-import { Color } from "../../Styles/color";
-import { fontSize } from "../../Styles/font"
+import { Color } from "../../styles/color";
+import { fontSize } from "../../styles/font"
 
 const Btn = styled.button<ButtonProps>`
     display: flex;

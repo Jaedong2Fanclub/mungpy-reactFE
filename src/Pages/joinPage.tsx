@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Join from "../component/join/join";
 import {IoIosArrowBack} from 'react-icons/io';
-import '../Styles/joinStyle.scss';
+import '../styles/joinStyle.scss';
 
 const JoinPage = () => {
   const navigate = useNavigate();

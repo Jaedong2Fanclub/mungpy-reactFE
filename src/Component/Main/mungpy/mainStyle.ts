@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { fontSize } from "../../../Styles/font";
+import { fontSize } from "../../../styles/font";
 
 export const Box = styled.div`
   width: 600px;
