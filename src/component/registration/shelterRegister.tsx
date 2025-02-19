@@ -56,7 +56,7 @@ const ShelterRegister = () => {
 
   return (
     <div style={{width: "390px"}}>
-      {/* <Header/> */}
+      {/* <header/> */}
       <div style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', fontWeight: '700'}}>
         유기견/묘 등록
       </div>

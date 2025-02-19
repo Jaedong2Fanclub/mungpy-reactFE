@@ -75,7 +75,7 @@ const Home = () => {
                 </div>
             </SectionWrapper>
         </Box>
-            {/* <Footer/> */}
+            {/* <footer/> */}
         </>
     )
 }
