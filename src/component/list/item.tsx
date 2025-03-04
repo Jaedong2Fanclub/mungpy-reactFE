@@ -10,7 +10,7 @@ interface dataProps {
 const AnimalFindItem:React.FC<dataProps> = ({id, title, subtitle, image}) => {
     const nav = useNavigate();
     const handleSelect = () => {
-        nav(`/animal/${id}`);
+        nav(`${process.env.REACT_APP_BASE_URL}/animal/${id}`);
     };
     return(
         <div onClick={handleSelect} style={{marginRight:'20px', textAlign:'left'}}>
