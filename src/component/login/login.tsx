@@ -121,6 +121,14 @@ const Login = () => {
     navigate('/join');
   }
 
+  const Kakao_login = () => {
+    window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_KAKAO_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_BASE_URL}/auth/kakao/callback&response_type=code`
+  }
+
+  const Naver_login = () => {
+    window.location.href = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${process.env.REACT_APP_NAVER_CLIENT_ID}&state=${process.env.REACT_APP_NAVER_STATE}&redirect_uri=${process.env.REACT_APP_BASE_URL}/auth/naver/callback`
+  }
+
   const { validatePassword, passwordError, validateConfirmPassword, passwordColor} = E.usePasswordValidation(() => getValues("password"));
 
   const onSubmitHandler: SubmitHandler<LoginProps> = async (data) => {
@@ -137,7 +145,7 @@ const Login = () => {
       return;
     }
     try {
-    const res = await axios.post(`api url`, formData, {
+    const res = await axios.post(`${process.env.REACT_APP_BASE_URL}/login`, formData, {
       headers: {
         withCredentials: true,
       },
@@ -212,13 +220,14 @@ const Login = () => {
         </form>
         ): (
           <div>
-            <div className="flex-container">
-              <div className="flex-line"></div>
-              <p>SNS 계정으로 로그인</p>
-              <div className="flex-line"></div>
-            </div>
-            <img src={KakaoLogin}/>
-          </div>
+            <p>SNS 계정으로 로그인</p>
+            <button onClick={Kakao_login}>
+              <img src={KakaoLogin}/>
+            </button>
+            <button onClick={Naver_login}>
+              <img src={KakaoLogin} />
+            </button>
+        </div>
         )}
       </div>
     </div>
