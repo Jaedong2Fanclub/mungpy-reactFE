@@ -17,5 +17,4 @@ COPY . .
 #CMD ["HOST=0.0.0.0", "npm", "start"]
 CMD ["sh", "-c", "HOST=0.0.0.0 npm start"]
 
-# 포트 노출
 EXPOSE 3000
