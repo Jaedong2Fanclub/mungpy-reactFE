@@ -19,6 +19,7 @@ const AnimalSearch = ({text} : {text:string}) => {
 
   const [allAnimals, setAllAnimals] = useState<any[]>([]);
   const [filteredAnimals, setFilteredAnimals] = useState<any[]>([]);
+  console.log("dfsdf");
 
   useEffect(() => {
     const fetchAnimals = async() => {
