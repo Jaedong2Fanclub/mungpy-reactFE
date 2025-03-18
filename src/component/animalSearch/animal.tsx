@@ -24,7 +24,7 @@ const AnimalSearch = ({text} : {text:string}) => {
   useEffect(() => {
     const fetchAnimals = async() => {
       try {
-        let apiUrl = `${process.env.REACT_APP_BASE_URL}/api/animals`;
+        let apiUrl = `${process.env.REACT_APP_BASE_URL}api/animals`;
         if(text === "보호소 정보 조회") {
           apiUrl = `${process.env.REACT_APP_BASE_URL}api/shelters`;
         }
