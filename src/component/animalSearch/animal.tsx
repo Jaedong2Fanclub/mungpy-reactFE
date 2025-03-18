@@ -19,13 +19,14 @@ const AnimalSearch = ({text} : {text:string}) => {
 
   const [allAnimals, setAllAnimals] = useState<any[]>([]);
   const [filteredAnimals, setFilteredAnimals] = useState<any[]>([]);
+  console.log("dfsdf");
 
   useEffect(() => {
     const fetchAnimals = async() => {
       try {
-        let apiUrl = "/api/animals";
+        let apiUrl = `${process.env.REACT_APP_BASE_URL}/api/animals`;
         if(text === "보호소 정보 조회") {
-          apiUrl = "api/shelters";
+          apiUrl = `${process.env.REACT_APP_BASE_URL}api/shelters`;
         }
         const res = await axios.get(apiUrl);
         setAllAnimals(res.data);

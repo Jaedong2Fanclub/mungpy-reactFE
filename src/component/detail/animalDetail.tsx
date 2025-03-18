@@ -25,7 +25,7 @@ const AnimalDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/api/animal/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/animal/${id}`);
         setData(response.data);
       } catch (error) {
         console.error("Error fetching animal data:", error);
