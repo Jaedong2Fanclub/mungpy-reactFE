@@ -122,11 +122,11 @@ const Login = () => {
   }
 
   const Kakao_login = () => {
-    window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_KAKAO_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_BASE_URL}/auth/kakao/callback&response_type=code`
+    window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_KAKAO_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_BASE_URL}auth/kakao/callback&response_type=code`
   }
 
   const Naver_login = () => {
-    window.location.href = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${process.env.REACT_APP_NAVER_CLIENT_ID}&state=${process.env.REACT_APP_NAVER_STATE}&redirect_uri=${process.env.REACT_APP_BASE_URL}/auth/naver/callback`
+    window.location.href = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${process.env.REACT_APP_NAVER_CLIENT_ID}&state=${process.env.REACT_APP_NAVER_STATE}&redirect_uri=${process.env.REACT_APP_BASE_URL}auth/naver/callback`
   }
 
   const { validatePassword, passwordError, validateConfirmPassword, passwordColor} = E.usePasswordValidation(() => getValues("password"));
@@ -145,7 +145,7 @@ const Login = () => {
       return;
     }
     try {
-    const res = await axios.post(`${process.env.REACT_APP_BASE_URL}/login`, formData, {
+    const res = await axios.post(`${process.env.REACT_APP_BASE_URL}login`, formData, {
       headers: {
         withCredentials: true,
       },

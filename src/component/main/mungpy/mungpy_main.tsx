@@ -16,7 +16,7 @@ const Mungpy_Main = () => {
   }
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_BASE_URL}/api/matching-animals/request-count`)
+    axios.get(`${process.env.REACT_APP_BASE_URL}api/matching-animals/request-count`)
     .then((res) => {
       setParticipants(res.data.participants);
     }).catch((error)=> {
